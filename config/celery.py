@@ -7,3 +7,5 @@ result_backend = 'redis://127.0.0.1'
 
 enable_utc = False
 timezone = 'Asia/Shanghai'
+
+worker_redirect_stdouts_level = 'DEBUG'
