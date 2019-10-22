@@ -1,0 +1,77 @@
+# project files
+ravenmsg.cfg
+
+*.log
+
+*.py[cod]
+
+# sqlite files
+*.db
+
+# C extensions
+*.so
+
+# Other version control
+.svn
+
+# temp files
+**#
+**~
+*.bak
+
+# swap files
+*.swp
+*.orig
+
+# Packages
+*.egg
+*.egg-info
+build
+eggs
+parts
+bin
+var
+sdist
+__pycache__
+node_modules
+develop-eggs
+.installed.cfg
+lib
+lib64
+.venv
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Project related
+*migrations*
+media
+template
+debug.sh
+venv
+debug/
+.idea/
+env.local
+boto.json
+services.py
+services.json
+status_code.json
+mock.json
+src/pip-delete-this-directory.txt
+.vscode/
+.pylintrc
+src
+.src/
+*.DS_Store
