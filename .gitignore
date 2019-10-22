@@ -1,12 +1,6 @@
 # project files
-ravenmsg.cfg
-
 *.log
-
 *.py[cod]
-
-# sqlite files
-*.db
 
 # C extensions
 *.so
@@ -57,21 +51,10 @@ nosetests.xml
 
 # Project related
 *migrations*
-media
-template
-debug.sh
 venv
 debug/
 .idea/
 env.local
-boto.json
-services.py
-services.json
-status_code.json
-mock.json
-src/pip-delete-this-directory.txt
 .vscode/
 .pylintrc
-src
-.src/
 *.DS_Store
