@@ -7,6 +7,7 @@ logger = logging.getLogger(__name__)
 
 
 def receive_event(sync_data):
+    print('sync_data: %s' % sync_data)
     logger.info('sync_data: %s' % sync_data)
 
 
