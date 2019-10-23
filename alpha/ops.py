@@ -1,6 +1,9 @@
 # -*-coding:utf-8 -*-
 import datetime
+import logging
 from celery_app import app
+
+logger = logging.getLogger(__name__)
 
 
 def async_calc(x, y):
@@ -9,9 +12,10 @@ def async_calc(x, y):
 
 @app.task
 def calc(x, y, verbose=None):
-    print('start calc: %s' % str(datetime.datetime.now()))
+    logger.info('start calc: %s' % str(datetime.datetime.now()))
     if verbose:
         print(verbose)
     ret = x + y
-    print('%s + %s = %s' % (x, y, ret))
+    logger.info('%s + %s = %s' % (x, y, ret))
+    logger.info('end calc: %s' % str(datetime.datetime.now()))
     return ret
