@@ -14,7 +14,7 @@ def async_calc(x, y):
 def calc(x, y, verbose=None):
     logger.info('start calc: %s' % str(datetime.datetime.now()))
     if verbose:
-        print(verbose)
+        logger.info('verbose: %s' % verbose)
     ret = x + y
     logger.info('%s + %s = %s' % (x, y, ret))
     logger.info('end calc: %s' % str(datetime.datetime.now()))
