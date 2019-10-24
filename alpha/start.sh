@@ -2,13 +2,13 @@
 
 echo "start processing..."
 
-sudo docker container stop rabbitmq &> /dev/null
+sudo docker container stop rabbitmq 2> /dev/null
 if [[ ! "$?" ]]; then
     sudo docker container rm rabbitmq
 fi
 echo "rm docker rabbitmq done."
 
-sudo docker container stop redis &> /dev/null
+sudo docker container stop redis 2> /dev/null
 if [[ ! "$?" ]]; then
   sudo docker container rm redis
 fi
