@@ -20,9 +20,9 @@ parser.add_argument('-d', '--debug', action='store_true', default=False,
                     help='show the debug')
 
 # 用单词做参数，默认为必选参数
-parser.add_argument('name')
+parser.add_argument('name', help='test positional argument')
 # 参数类型，可以进行有效约束
-parser.add_argument('age', type=int)
+parser.add_argument('age', type=int, help='test argument type')
 
 # 可选参数 -或--开头
 parser.add_argument('-V', '--verbose', help='increase output verbose.')
@@ -30,11 +30,11 @@ parser.add_argument('-V', '--verbose', help='increase output verbose.')
 # 有些参数，是互斥的，有你无我，如性别
 # 实际测试情况，都不填时，默认都是False
 group = parser.add_mutually_exclusive_group()
-group.add_argument('-m', '--male', action='store_true')
-group.add_argument('-f', '--female', action='store_true')
+group.add_argument('-m', '--male', action='store_true', help='test group argument')
+group.add_argument('-f', '--female', action='store_true', help='test group argument')
 # 可选列表值，是较好的实践
 parser.add_argument('-g', '--gender', default='male',
-                    choices=['male', 'female'])
+                    choices=['male', 'female'], help='test choices list')
 
 args = parser.parse_args()
 args = vars(args)
