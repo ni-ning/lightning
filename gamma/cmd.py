@@ -15,12 +15,15 @@ parser = argparse.ArgumentParser(description='This script is just used for test.
 parser.add_argument('-v', '--version', action='version',
                     version='%(prog)s version: 0.0.1', help='show the version')
 
-# 默认(即不指定)为False; -d, --debug 则debug=True
+# action='store_true'含义解析 默认(即不指定)为False; -d, --debug 则debug=True
 parser.add_argument('-d', '--debug', action='store_true', default=False,
                     help='show the debug')
 
 # 用单词做参数，默认为必选参数
 parser.add_argument('name')
+
+# 可选参数 -或--开头
+parser.add_argument('-V', '--verbose', help='increase output verbose.')
 
 args = parser.parse_args()
 args = vars(args)
