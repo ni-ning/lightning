@@ -6,6 +6,11 @@
 
 import argparse
 
-parse = argparse.ArgumentParser(description='used for test')
-args = parse.parse_args()
+parser = argparse.ArgumentParser(description='This script is just used for test.')
+parser.add_argument('--version', '-v', action='version',
+                    version='%(prog)s version: 0.0.1', help='show the version')
+parser.add_argument('--debug', '-d', action='store_true', default=False,
+                    help='show the debug')
+
+args = parser.parse_args()
 

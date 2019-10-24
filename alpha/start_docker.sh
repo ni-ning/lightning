@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "start processing..."
+echo "start docker ..."
 
 sudo docker container stop rabbitmq 2> /dev/null
 if [[ ! "$?" ]]; then
