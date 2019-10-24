@@ -27,6 +27,11 @@ parser.add_argument('age', type=int)
 # 可选参数 -或--开头
 parser.add_argument('-V', '--verbose', help='increase output verbose.')
 
+# 有些参数，是互斥的，有你无我，如性别
+group = parser.add_mutually_exclusive_group()
+group.add_argument('-m', '--male', action='store_true')
+group.add_argument('-f', '--female', action='store_true')
+
 args = parser.parse_args()
 args = vars(args)
 print(args)
