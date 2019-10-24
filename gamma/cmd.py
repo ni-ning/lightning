@@ -7,9 +7,9 @@
 import argparse
 
 parser = argparse.ArgumentParser(description='This script is just used for test.')
-parser.add_argument('--version', '-v', action='version',
+parser.add_argument('-v', '--version', action='version',
                     version='%(prog)s version: 0.0.1', help='show the version')
-parser.add_argument('--debug', '-d', action='store_true', default=False,
+parser.add_argument('-d', '--debug', action='store_true', default=False,
                     help='show the debug')
 
 args = parser.parse_args()
