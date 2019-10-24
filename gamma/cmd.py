@@ -21,6 +21,8 @@ parser.add_argument('-d', '--debug', action='store_true', default=False,
 
 # 用单词做参数，默认为必选参数
 parser.add_argument('name')
+# 参数类型，可以进行有效约束
+parser.add_argument('age', type=int)
 
 # 可选参数 -或--开头
 parser.add_argument('-V', '--verbose', help='increase output verbose.')
