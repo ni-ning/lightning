@@ -36,6 +36,9 @@ group.add_argument('-f', '--female', action='store_true', help='test group argum
 parser.add_argument('-g', '--gender', default='male',
                     choices=['male', 'female'], help='test choices list')
 
+# 多余的位置参数
+parser.add_argument('options', default=[], nargs='*')
+
 args = parser.parse_args()
 args = vars(args)
 print(args)
