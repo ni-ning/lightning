@@ -11,4 +11,4 @@ def receive_event(sync_data):
     logger.info('sync_data: %s' % sync_data)
 
 
-event_bus.alpha_signal_commit_event.connect(receive_event)
+event_bus.beta_signal_commit_event.connect(receive_event)

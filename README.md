@@ -1,22 +1,15 @@
-## 概述
-`闪电alpha` 项目是平时实践技术总结，包含各类知识点
+`闪电` 项目是平时实践技术总结，一个一个小轮子推着你前进
  
-环境支持
-- docker [rabbitmq, redis] 
-- virtualenv
-- tmux
-- uwsgi
+[alpha](https://github.com/ni-ning/lightning/tree/master/alpha) - 分布式消息队列 celery
 
-Python技术集
-- flask restful api
-- celery
-- logging
-
-
-## Project Structure
-
-
-## Startup
+[beta](https://github.com/ni-ning/lightning/tree/master/beta) - 自定义信号
 ```bash
-celery worker -A celery_app
+# event_bus.py 自定义信号 signal
+beta_signal_commit_event.send(sync_data)
+beta_signal_commit_event.connect(handle)
+```
+
+[gamma](https://github.com/ni-ning/lightning/tree/master/gamma) - 命令行参数解析
+```sh
+python gamma/cmd.py linda 28 -d --female
 ```

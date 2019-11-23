@@ -8,5 +8,5 @@ def commit_event():
         'custom_id': '007',
         'custom_name': 'beta'
     }
-    event_bus.alpha_signal_commit_event.send(sync_data)
+    event_bus.beta_signal_commit_event.send(sync_data)
 

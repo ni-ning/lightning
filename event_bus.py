@@ -3,5 +3,5 @@
 from blinker import signal
 
 
-_ALPHA_SIGNAL_COMMIT_EVENT = 'alpha_signal_commit_event'
-alpha_signal_commit_event = signal(_ALPHA_SIGNAL_COMMIT_EVENT)
+_BETA_SIGNAL_COMMIT_EVENT = 'beta_signal_commit_event'
+beta_signal_commit_event = signal(_BETA_SIGNAL_COMMIT_EVENT)
