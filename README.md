@@ -13,3 +13,13 @@ beta_signal_commit_event.connect(handle)
 ```sh
 python gamma/cmd.py linda 28 -d --female
 ```
+
+#### [delta](https://github.com/ni-ning/lightning/tree/master/delta) - 定义网络日志
+
+```bash
+# 安装 python 依赖
+pip install fluent-logger
+
+# Fluentd daemon 日志采集服务器
+docker run [options] fluentd
+```
