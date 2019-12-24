@@ -13,7 +13,7 @@ def hello(self, x, y):
     time.sleep(5)
     self.update_state(state='PROGRESS', meta={'progress': 90})
     time.sleep(3)
-    return 'hello world: %s' % (x + y)
+    return 'hello world: %i' % (x + y)
 
 
 def on_raw_message(body):
