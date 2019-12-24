@@ -16,15 +16,12 @@ def hello(self, x, y):
     return 'hello world: %i' % (x + y)
 
 
-# @app.task(bind=True)
-# def hello(self, a, b):
-#     print(self.update_state)
-#     print(a, b)
-#     return 'hello world: %i' % (a+b)
-
-
 def on_raw_message(body):
     print(body)
 
 
+if __name__ == '__main__':
+    # hello(100, 200) 就不要再调用了，会抛出异常
+    r = hello.delay(100, 200)
+    print(r.get(on_message=on_raw_message, propagate=False))
 
