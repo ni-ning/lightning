@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 
 def async_calc(x, y):
-    calc.apply_async(args=(x, y), kwds={'verbose': 'Hello world!'})
+    calc.apply_async(args=(x, y), kwargs={'verbose': 'Hello world!'})
 
 
 @app.task
