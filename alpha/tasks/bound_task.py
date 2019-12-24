@@ -18,7 +18,7 @@ from celery_app import app
 
 @app.task(bind=True)
 def hello(self, a, b):
-    print(self)
+    print(self.update_state)
     print(a, b)
     return 'hello world: %i' % (a+b)
 
