@@ -4,7 +4,7 @@ from __future__ import absolute_import, unicode_literals
 from celery_app import app
 
 
-@app.task
+@app.task(name='alpha.tasks.basic_task')
 def add(x, y):
     return x + y
 
