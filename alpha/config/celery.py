@@ -15,6 +15,8 @@ timezone = 'Asia/Shanghai'
 
 worker_redirect_stdouts_level = 'DEBUG'
 
+# 默认队列名 celery -> default
+task_default_queue = 'default'
 
 # 周期性任务配置
 beat_schedule = {
