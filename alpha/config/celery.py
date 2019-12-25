@@ -9,13 +9,23 @@ include = ('alpha.tasks.basic_task',
            'alpha.ops')
 
 broker_url = 'pyamqp://guest@127.0.0.1//'
-# broker_url = 'librabbitmq://guest@127.0.0.1//'
 result_backend = 'redis://127.0.0.1'
 
 enable_utc = False
 timezone = 'Asia/Shanghai'
 
+# Default: WARNING
+# The log level output to stdout and stderr
 worker_redirect_stdouts_level = 'DEBUG'
+
+# Default: Enabled by default(hijack root logger)
+# False can customize your own logging handlers
+worker_hijack_root_logger = False
+
+# Default: Disable
+# Late ack means the task messages will be acknowledged after the task has been executed,
+# not just before(the default behavior)
+task_acks_late = True
 
 # If enabled(default), any queues specified that aren't defined in task_queues
 # will be automatically created.
