@@ -5,6 +5,7 @@ from celery.schedules import crontab
 
 include = ('alpha.tasks.basic_task',
            'alpha.tasks.bound_task',
+           'alpha.tasks.inheritance_task',
            'alpha.tasks.schedule',
            'alpha.ops')
 
