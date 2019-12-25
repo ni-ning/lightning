@@ -1,6 +1,6 @@
 # -*-coding:utf-8 -*-
 
-from kombu import Queue, Exchange
+from kombu import Queue, Exchange, binding
 from celery.schedules import crontab
 
 include = ('alpha.tasks.basic_task',
@@ -8,7 +8,8 @@ include = ('alpha.tasks.basic_task',
            'alpha.tasks.schedule',
            'alpha.ops')
 
-broker_url = 'pyamqp://guest@127.0.0.1//'
+# broker_url = 'pyamqp://guest@127.0.0.1//'
+broker_url = 'librabbitmq://guest@127.0.0.1//'
 result_backend = 'redis://127.0.0.1'
 
 enable_utc = False
@@ -21,12 +22,22 @@ worker_redirect_stdouts_level = 'DEBUG'
 task_create_missing_queues = True
 
 # a list of Queue instances
+media_exchange = Exchange('media', type='direct')
 task_queues = (
     Queue('tianfu-gbm-celery-task-main',
-          exchange=Exchange('tianfu-gbm-celery-task-main'),
-          routing_key='tianfu-gbm-celery-task-main',
-          type='direct'),
+          exchange=Exchange('tianfu-gbm-celery-task-main', type='direct'),
+          routing_key='tianfu-gbm-celery-task-main'),
+    Queue('videos', exchange=media_exchange, routing_key='media.video'),
+    Queue('images', exchange=media_exchange, routing_key='media.image')
 )
+
+# multiple bindings to a single queue
+# task_queues = (
+#     Queue('media', [
+#         binding(media_exchange, routing_key='media.video'),
+#         binding(media_exchange, routing_key='media.image'),
+#     ])
+# )
 
 # 默认队列名 celery -> default
 task_default_queue = 'tianfu-gbm-celery-task-main'
@@ -36,9 +47,13 @@ task_default_exchange_type = 'direct'
 
 # 路由配置，and override this using the routing_key argument to Task.apply_async()
 # task_routes = {
-#         'feeds.tasks.import_feed': {
-#             'queue': 'feed_tasks',
-#             'routing_key': 'feed.import',
+#         'media.tasks.video': {
+#             'queue': 'videos',
+#             'routing_key': 'media.video',
+#         },
+#         'media.tasks.image': {
+#             'queue': 'images',
+#             'routing_key': 'media.image',
 #         },
 # }
 
