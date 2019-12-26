@@ -20,7 +20,7 @@
 
 
 # 小程序免密登录
-![钉钉小程序授权登录](https://raw.githubusercontent.com/ni-ning/lightning/master/images/epsilon/dinding.jpg)
+![dingding](https://raw.githubusercontent.com/ni-ning/lightning/master/images/epsilon/dingding.jpg)
 
 # dingtalk-sdk 源码入门
 
