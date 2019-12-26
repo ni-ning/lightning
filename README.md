@@ -36,3 +36,11 @@ pip install fluent-logger
 # Fluentd daemon 日志采集服务器
 docker run [options] fluentd
 ```
+#### [epsilon](https://github.com/ni-ning/lightning/tree/master/epsilon) - 钉钉小程序
+```
+# 钉钉小程序登录
+GET http://localhost/api/v1/epsilon/ding/login
+
+# 后端自动处理登录后 userid 业务逻辑
+POST http://localhost/api/v1/epsilon/ding/list
+```
