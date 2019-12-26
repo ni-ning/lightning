@@ -1,5 +1,8 @@
 `闪电` 项目是平时实践技术总结，一个一个小轮子推着你前进
- 
+
+- 基于 flask
+- 每个字母代表一个独立项目 
+
 #### [alpha](https://github.com/ni-ning/lightning/tree/master/alpha) - 消息队列
 ```
 lightning
@@ -43,4 +46,19 @@ GET http://localhost/api/v1/epsilon/ding/login
 
 # 后端自动处理登录后 userid 业务逻辑
 POST http://localhost/api/v1/epsilon/ding/list
+```
+
+#### [omega](https://github.com/ni-ning/lightning/tree/master/omega) - Flask Restful API
+
+```
+lightning
+    |- omega 
+        |- constant.py  # 业务常量
+        |- models.py    # 业务模型
+        |- ops.py       # 业务逻辑函数
+        |- views.py     # 对外接口
+    |- utils    
+        |- api.py    # 返回值封装 json  
+        |- status_code.py # 统一状态码
+    |- app.py        # 实例启动入口
 ```
