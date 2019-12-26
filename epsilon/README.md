@@ -20,13 +20,9 @@
 
 
 # 小程序免密登录
-![钉钉小程序授权登录](https://raw.githubusercontent.com/ni-ning/lightning/master/images/epsilon/dingding.png)
+![钉钉小程序授权登录](https://raw.githubusercontent.com/ni-ning/lightning/master/images/epsilon/dinding.jpg)
 
 # dingtalk-sdk 源码入门
-
-- [PyPi](https://pypi.org/project/dingtalk-sdk/)
-- [GitHub](https://github.com/007gzs/dingtalk-sdk)
-
 
 ```
 # 安装依赖
