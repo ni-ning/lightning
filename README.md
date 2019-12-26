@@ -1,8 +1,21 @@
 `闪电` 项目是平时实践技术总结，一个一个小轮子推着你前进
  
-#### [alpha](https://github.com/ni-ning/lightning/tree/master/alpha) - 分布式消息队列 celery
+#### [alpha](https://github.com/ni-ning/lightning/tree/master/alpha) - 消息队列
+```
+lightning
+    |- alpha 
+        |- config/celery.py # celery配置
+        |- rabbitmq         # rabbitmq示例
+        |- tasks/           # 各类celery任务
+    |- celery_app.py        # celery实例启动入口
+```
+
+- Celery - Distributed Task Queue
+- Kombu
+- RabbitMQ
 
 #### [beta](https://github.com/ni-ning/lightning/tree/master/beta) - 自定义信号
+
 ```bash
 # event_bus.py 自定义信号 signal
 beta_signal_commit_event.send(sync_data)
