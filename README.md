@@ -3,7 +3,7 @@
 - 基于 flask
 - 每个字母代表一个独立项目 
 
-#### [alpha](https://github.com/ni-ning/lightning/tree/master/alpha) - 消息队列
+#### [alpha](https://github.com/ni-ning/lightning/tree/master/alpha) - Celery: Distributed Task Queue
 ```
 lightning
     |- alpha 
