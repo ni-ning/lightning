@@ -78,7 +78,7 @@ logging日志模块四大组件
 
 
 
-![logging](37350498676842D5A2AAAA0C566DD9B4)
+![logging](https://github.com/ni-ning/lightning/images/delta/logging.png)
 
 ```
 import logging
@@ -117,7 +117,7 @@ logger.critical("critical_msg")
 
 ## 日志网络发送 fluent-logger和fluentd
 Fluentd daemon 日志采集服务器，fluent-logger发送日志到日志采集服务器上
-![fluent](12F56835104446FB9C985B21BF706BC9)
+![fluent](https://github.com/ni-ning/lightning/images/delta/fluent.png)
 
 
 
