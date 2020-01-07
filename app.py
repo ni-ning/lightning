@@ -1,14 +1,12 @@
 # -*-coding:utf-8 -*-
 
 import flask
-from alpha.views import alpha
 from epsilon.views import epsilon
 from omega.views import omega
 
 app = flask.Flask('lightning')
 
 prefix = '/api/v1'
-app.register_blueprint(alpha, url_prefix=prefix + '/alpha')
 app.register_blueprint(epsilon, url_prefix=prefix + '/epsilon')
 app.register_blueprint(omega, url_prefix=prefix + '/omega')
 

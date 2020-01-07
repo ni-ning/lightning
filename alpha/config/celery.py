@@ -1,13 +1,12 @@
 # -*-coding:utf-8 -*-
 
-from kombu import Queue, Exchange, binding
+from kombu import Queue, Exchange
 from celery.schedules import crontab
 
 include = ('alpha.tasks.basic_task',
            'alpha.tasks.bound_task',
            'alpha.tasks.inheritance_task',
-           'alpha.tasks.schedule',
-           'alpha.ops')
+           'alpha.tasks.schedule')
 
 broker_url = 'pyamqp://guest@127.0.0.1//'
 result_backend = 'redis://127.0.0.1'

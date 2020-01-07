@@ -3,7 +3,7 @@
 from __future__ import absolute_import, unicode_literals
 from celery.utils.log import get_logger
 
-from celery_app import app
+from alpha.celery_app import app
 
 
 logger = get_logger(__name__)

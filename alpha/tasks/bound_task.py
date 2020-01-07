@@ -2,7 +2,7 @@
 from __future__ import absolute_import, unicode_literals
 
 import time
-from celery_app import app
+from alpha.celery_app import app
 
 
 # Celery support catching all states changes by setting on_message callback.
